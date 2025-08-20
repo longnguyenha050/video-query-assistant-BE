@@ -2,3 +2,4 @@ flask
 pathlib
 python-dotenv
 mysqlclient
+flask_cors
