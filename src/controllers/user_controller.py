@@ -3,11 +3,10 @@ from src.services.user_service import getImageData
 
 users = Blueprint("users", __name__)
 
-@users.route('/', methods = ["GET"])
+@users.route('/', methods = ["GET"]) #localhost:3000/users/
 def handle_home():
 
     res = getImageData()
-
     response_data = {
         "success": True,
         "data": {

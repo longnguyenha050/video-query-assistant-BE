@@ -18,7 +18,8 @@ config = Config().dev_config
 app.env = config.ENV
 
 
-# import api blueprint to register it with app
-from src.routes import api
-app.register_blueprint(api, url_prefix = "/api")
+from src.controllers.user_controller import users
+
+# register user with api blueprint
+app.register_blueprint(users, url_prefix="/users")
 
